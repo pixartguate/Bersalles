@@ -1,0 +1,494 @@
+/* -----------------------------------------------------------------------------
+Declaracion de funciones globales CSS Orientado a Objeto
+-------------------------------------------------------------------------------- */
+
+.funcionCaja{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) 1500px repeat(1, 1fr);
+    /* grid-template-rows: ; */
+}
+
+/*
+* Estilos a la pagina header
+*
+*/
+
+/*
+* Estilos a la barra de nav
+*
+* @id #nav
+*
+*/
+
+#nav{
+    padding: 15px 65px 0px 65px;
+}
+/*  */
+#nav .nav_caja{
+    all: revert;
+    display: grid;
+    grid-template-columns: 118.10px repeat(1, 1fr);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 24px;
+}
+#nav .nav_caja .nav_caja_logo{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#nav .nav_caja .nav_caja_logo img{
+    /* Calcular el ancho proporcional: */
+    width: auto;
+    height: 50px;
+}
+#nav .nav_caja .nav_caja_logo span{
+    font-size: var(--textoSubTitulo);
+    font-weight: 600;
+}
+#nav .nav_caja .nav_caja_lista{
+    all: revert;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#nav .nav_caja .nav_caja_lista > li{
+    all: revert;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#nav .nav_caja .nav_caja_lista > li:not(:last-child){
+    margin-right: 8px;
+}
+#nav .nav_caja .nav_caja_lista > li:not(:last-child) {
+    padding-right: 8px;
+    border-right: 3px solid var(--color_verdeClaro);
+}
+#nav .nav_caja .nav_caja_lista > li > a{
+    all: revert;
+    display: flex;
+    font-size: var(--textoContenido);
+    font-weight: 400;
+    color: var(--color_blanco);
+    text-decoration: none;
+}
+#nav .nav_caja .nav_caja_lista > li > a:hover{
+    color: var(--color_verdeBrillante);
+}
+/*  */
+#nav .nav_caja .nav_caja_lista .unico{
+    position: relative;
+}
+#nav .nav_caja .nav_caja_lista .unico ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+    background: var(--color_blanco);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#nav .nav_caja .nav_caja_lista .unico:hover > ul,
+#nav .nav_caja .nav_caja_lista .unico:focus-within > ul {
+    display: block;
+}
+#nav .nav_caja .nav_caja_lista .unico > ul li a{
+    padding-left: 16px;
+    padding-right: 16px;
+    white-space: nowrap;
+}
+#nav .nav_caja .nav_caja_lista .unico:hover > a::after,
+#nav .nav_caja .nav_caja_lista .unico:focus-within > a::after {
+    transform: rotate(180deg);
+}
+/*  */
+#nav .nav_caja div{
+    display: none;
+}
+#nav .nav_caja figure{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#nav .nav_caja figure img{
+    width: auto;
+    height: 50px;
+}
+
+/*
+* Estilos a la pagina index
+*
+*/
+
+/*
+* Estilos a la seccion headerIndex
+*
+* @id #headerIndex
+*
+*/
+
+#headerIndex{
+    grid-template-rows: calc(754px);
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#headerIndex .headerIndex_inicio{
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+}
+/*  */
+#headerIndex .headerIndex_inicio .headerIndex_inicio_datos{
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+    margin-top: 125px;
+}
+#headerIndex .headerIndex_inicio .headerIndex_inicio_datos h1{
+    font-size: 4.8rem;
+}
+#headerIndex .headerIndex_inicio .headerIndex_inicio_datos p{
+    font-size: 1.8rem;
+}
+/*  */
+#headerIndex .headerIndex_inicio .headerIndex_inicio_model{
+    grid-row: 1 / 2;
+    grid-column: 5 / 8;
+}
+#headerIndex .headerIndex_inicio .headerIndex_inicio_model .headerIndex_inicio_model_contenido h2{
+    font-size: 2.2rem;
+}
+
+/*
+* Estilos a la seccion asideIndex
+*
+* @id #asideIndex
+*
+*/
+
+#asideIndex{
+    padding: 0px 65px 50px 65px;
+}
+/*  */
+#asideIndex section{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+* Estilos a la seccion mainIndex
+*
+* @id #mainIndex
+*
+*/
+
+#mainIndex{
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#mainIndex .mainIndex_servicios{
+    grid-template-columns: repeat(4, 1fr);
+}
+/*  */
+#mainIndex .mainIndex_servicios .mainIndex_servicios_titulo{
+    grid-column: 1 / 5;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_titulo h2{
+    margin-bottom: 12px;
+    padding: 0px 10% 0px 10%;
+    font-size: 4.8rem;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_titulo p{
+    padding: 0px 10% 0px 10%;
+    font-size: 1.8rem;
+}
+/*  */
+#mainIndex .mainIndex_servicios .mainIndex_servicios_contenedor{
+    align-items: start;
+    justify-content: start;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_contenedor div{
+    flex-direction: row;
+    justify-content: start;
+    text-align: start;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_contenedor div h3{
+    margin-left: 16px;
+    width: calc(100% - 91px);
+    font-size: 2rem;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_contenedor div figure{
+    margin-bottom: 0px;
+}
+#mainIndex .mainIndex_servicios .mainIndex_servicios_contenedor p{
+    display: flex;
+    margin-top: 16px;
+    font-size: 1.6rem;
+    color: #a6afbf;
+}
+
+/*
+* Estilos a la pagina servicios/diseno-grafico
+*
+*/
+
+/*
+* Estilos a la seccion sHeaderDisenoGrafico
+*
+* @id #sHeaderDisenoGrafico
+*
+*/
+
+#sHeaderDisenoGrafico{
+    grid-template-rows: calc(754px);
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio{
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    margin-top: 100px;
+}
+/*  */
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion{
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion h1{
+    font-size: 4.8rem;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion p{
+    font-size: 1.8rem;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion div{
+    flex-direction: row;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion div a:nth-child(1){
+    margin-right: 12px;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_informacion div a:not(:last-child){
+    margin-bottom: 0px;
+}
+/*  */
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_img{
+    grid-row: 1 / 2;
+    grid-column: 5 / 8;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_img .sHeaderDisenoGrafico_inicio_img_caja figure{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 400px;
+}
+#sHeaderDisenoGrafico .sHeaderDisenoGrafico_inicio .sHeaderDisenoGrafico_inicio_img .sHeaderDisenoGrafico_inicio_img_caja figure img{
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*
+* Estilos a la pagina portafolio/diseno-grafico
+*
+*/
+
+/*
+* Estilos a la seccion pHeaderDisenoGrafico
+*
+* @id #pHeaderDisenoGrafico
+*
+*/
+
+#pHeaderDisenoGrafico{
+    grid-template-rows: calc(754px);
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#pHeaderDisenoGrafico .pHeaderDisenoGrafico_inicio{
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    margin-top: 100px;
+}
+/*  */
+#pHeaderDisenoGrafico .pHeaderDisenoGrafico_inicio .pHeaderDisenoGrafico_inicio_informacion{
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+#pHeaderDisenoGrafico .pHeaderDisenoGrafico_inicio .pHeaderDisenoGrafico_inicio_informacion h1{
+    font-size: 4.8rem;
+}
+#pHeaderDisenoGrafico .pHeaderDisenoGrafico_inicio .pHeaderDisenoGrafico_inicio_informacion p:nth-child(3){
+    font-size: 1.8rem;
+}
+/*  */
+#pHeaderDisenoGrafico .pHeaderDisenoGrafico_inicio .pHeaderDisenoGrafico_inicio_img{
+    grid-row: 1 / 2;
+    grid-column: 5 / 8;
+    grid-auto-rows: 135px;
+}
+
+/*
+* Estilos a la seccion pMainDisenoGrafico
+* Pagina: diseno-grafico
+*
+* @id #pMainDisenoGrafico
+*
+*/
+
+#pMainDisenoGrafico{
+    padding: 0px 65px 50px 65px;
+}
+#pMainDisenoGrafico section{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*
+* Estilos a la pagina recursos/diseno-grafico
+*
+*/
+
+/*
+* Estilos a la seccion rHeaderDisenoGrafico
+*
+* @id #rHeaderDisenoGrafico
+*
+*/
+
+#rHeaderDisenoGrafico{
+    grid-template-rows: calc(754px);
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#rHeaderDisenoGrafico .rHeaderDisenoGrafico_inicio{
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    margin-top: 100px;
+}
+/*  */
+#rHeaderDisenoGrafico .rHeaderDisenoGrafico_inicio .rHeaderDisenoGrafico_inicio_informacion{
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+#rHeaderDisenoGrafico .rHeaderDisenoGrafico_inicio .rHeaderDisenoGrafico_inicio_informacion h1{
+    font-size: 4.8rem;
+}
+#rHeaderDisenoGrafico .rHeaderDisenoGrafico_inicio .rHeaderDisenoGrafico_inicio_informacion p:nth-child(3){
+    font-size: 1.8rem;
+}
+/*  */
+#rHeaderDisenoGrafico .rHeaderDisenoGrafico_inicio .rHeaderDisenoGrafico_inicio_img{
+    grid-row: 1 / 2;
+    grid-column: 5 / 8;
+}
+
+/*
+* Estilos a la pagina contactos
+*
+*/
+
+/*
+* Estilos a la seccion headerContactos
+*
+* @id #headerContactos
+*
+*/
+
+#headerContactos{
+    grid-template-rows: calc(754px);
+    padding: 50px 65px 50px 65px;
+}
+/*  */
+#headerContactos .headerContactos_inicio{
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    margin-top: 100px;
+}
+/*  */
+#headerContactos .headerContactos_inicio .headerContactos_inicio_informacion{
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_informacion h1{
+    font-size: 4.8rem;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_informacion p:nth-child(3){
+    font-size: 1.8rem;
+}
+/*  */
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img{
+    grid-row: 1 / 2;
+    grid-column: 5 / 8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mensaje .mensaje_titulo h3{
+    font-size: 2.2rem;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mensaje .mensaje_titulo p{
+    font-size: 1.6rem;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mensaje .mensaje_whatzapp{
+    display: flex;
+    align-items: end;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mensaje .mensaje_whatzapp figure{
+    display: flex;
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: repeating-linear-gradient(45deg, #0f1620 0 6px, #121a24 6px 12px), radial-gradient(140px 80px at 60% 20%, rgba(139, 92, 246, .22), transparent 60%);
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mensaje .mensaje_whatzapp figure img{
+    display: flex;
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.completo{
+    grid-column: span 2;
+}
+#headerContactos .headerContactos_inicio .headerContactos_inicio_img .headerContactos_inicio_img_caja.mitad{
+    grid-column: span 1;
+}
+
+/*
+* Estilos a la pagina footer
+*
+*/
+
+/*
+* Estilos a la seccion footer
+* Pagina: footer
+*
+* @id #footer
+*
+*/
+
+#footer{
+    grid-template-columns: repeat(5, 1fr);
+    padding: 50px 65px 30px 65px;
+}
+/*  */
+#footer .footer_inicio div a{
+    justify-content: start;
+}
+#footer .footer_inicio div p{
+    text-align: start;
+}
+#footer .footer_inicio ul{
+    justify-content: start;
+}
+#footer .footer_inicio ul li{
+    margin-right: 8px;
+}
+/*  */
+#footer .footer_derechos{
+    grid-row: 2 / 3;
+    grid-column: 1 / 6;
+}

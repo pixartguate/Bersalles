@@ -1,0 +1,10 @@
+# Ignorar la carpeta vendor de composer (raíz del proyecto)
+vendor/
+
+# No ignorar la carpeta vendor dentro de assets
+!public_html/assets/vendor/
+!public_html/assets/vendor/**
+
+# Ignorar archivos de configuración sensibles
+.env
+# config/env.php

@@ -1,0 +1,9 @@
+/* -----------------------------------------------------------------------------
+Declaracion de funciones globales CSS Orientado a Objeto
+-------------------------------------------------------------------------------- */
+
+.funcionCaja{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) 360px repeat(1, 1fr);
+    /* grid-template-rows: ; */
+}
