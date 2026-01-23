@@ -26,7 +26,7 @@ const botones = document.querySelectorAll("[data-get-botones-galeria]");
 
 const mostrarUnaCategoria = async ($contenedorImagenes, categoria) => {
     try{
-        const datosImagenes = await DatosGaleriaPorCategoria('/api/data.json', `${categoria}`);
+        const datosImagenes = await DatosGaleriaPorCategoria('api/data.json', `${categoria}`);
         const main = new Galeria();
         main.galeria($contenedorImagenes, datosImagenes);
 

@@ -128,39 +128,39 @@ Declaracion de funciones globales CSS Orientado a Objeto
 */
 
 /*
-* Estilos a la seccion headerIndex
+* Estilos a la seccion headerIndexa
 *
-* @id #headerIndex
+* @id #headerIndexa
 *
 */
 
-#headerIndex{
+#headerIndexa{
     grid-template-rows: calc(754px);
     padding: 50px 65px 50px 65px;
 }
 /*  */
-#headerIndex .headerIndex_inicio{
+#headerIndexa .headerIndexa_inicio{
     grid-template-columns: repeat(8, 1fr);
     align-items: start;
 }
 /*  */
-#headerIndex .headerIndex_inicio .headerIndex_inicio_datos{
+#headerIndexa .headerIndexa_inicio .headerIndexa_inicio_datos{
     grid-row: 1 / 2;
     grid-column: 2 / 5;
     margin-top: 125px;
 }
-#headerIndex .headerIndex_inicio .headerIndex_inicio_datos h1{
+#headerIndexa .headerIndexa_inicio .headerIndexa_inicio_datos h1{
     font-size: 4.8rem;
 }
-#headerIndex .headerIndex_inicio .headerIndex_inicio_datos p{
+#headerIndexa .headerIndexa_inicio .headerIndexa_inicio_datos p{
     font-size: 1.8rem;
 }
 /*  */
-#headerIndex .headerIndex_inicio .headerIndex_inicio_model{
+#headerIndexa .headerIndexa_inicio .headerIndexa_inicio_model{
     grid-row: 1 / 2;
     grid-column: 5 / 8;
 }
-#headerIndex .headerIndex_inicio .headerIndex_inicio_model .headerIndex_inicio_model_contenido h2{
+#headerIndexa .headerIndexa_inicio .headerIndexa_inicio_model .headerIndexa_inicio_model_contenido h2{
     font-size: 2.2rem;
 }
 
