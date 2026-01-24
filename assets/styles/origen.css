@@ -340,8 +340,7 @@ Declaracion de funciones globales CSS Orientado a Objeto
 */
 
 .headerIndex{
-  background: url('../images/header/barberia.png') center/cover no-repeat;
-
+    background: url('../images/header/barberia.png') center/cover no-repeat;
 }
 #headerIndex{
     grid-row: 1 / 2;
@@ -396,35 +395,34 @@ Declaracion de funciones globales CSS Orientado a Objeto
 #headerIndex section:nth-child(2){
     width: 100%;
     height: 50vh;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    /* place-content: center center; */
-    gap: 24px;
+    display: flex;
+    align-items: end;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 15px 15px 24px 15px;
 }
-#headerIndex section:nth-child(2) div:nth-child(1){
-    grid-row: 2 / 9;
-    grid-column: 3 / 4;
+#headerIndex section:nth-child(2) div{
+    width: 100%;
+    min-width: calc(75vw - 79px);
+    scroll-snap-align: center;
+    margin-left: 8px;
+    border-radius: 14px;
+    border-color: #ffd772;
+    box-shadow: 0 0 0 6px rgba(212,175,55,0.35);
 }
-#headerIndex section:nth-child(2) div:nth-child(2){
-    grid-row: 1 / 8;
-    grid-column: 4 / 5;
-}
-#headerIndex section:nth-child(2) div:nth-child(3){
-    grid-row: 2 / 9;
-    grid-column: 5 / 6;
-}
-#headerIndex section:nth-child(2) div:nth-child(4){
-    grid-row: 1 / 8;
-    grid-column: 6 / 7;
+#headerIndex section:nth-child(2) div:not(:last-child){
+    margin-right: 24px;
 }
 #headerIndex section:nth-child(2) div img{
     width: 100%;
-    border-radius: 22px;
-    overflow: hidden;
+    height: 300px;
+    border-radius: 14px;
+    /* overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, .7);
     transition: 0.4s;
-    background: #111;
+    background: #111; */
+    object-fit: cover;
 }
 
 /*
