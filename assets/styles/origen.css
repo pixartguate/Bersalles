@@ -56,13 +56,18 @@ Variables
     /* End: Variables de propiedades de tamaño de texto */
 
     /* Start: Variables de propiedades del boton */
-    --boton_height: 48px;
-    --boton_padding: 0px 16px 0px 16px;
+    --boton_padding: 13px 18px 13px 18px;
     --boton_fontSize: var(--textoContenido);
-    --boton_fontWeight: 600;
-    --boton_color: var(--color_blanco);
-    --boton_borderRadius: 8px;
-    --boton_background: var(--verde_brillante);
+    --boton_fontWeight: 700;
+    --boton_color: #0a1208;
+    --boton_border: 1px solid #b9972c;
+    --boton_borderRadius: 14px;
+    --boton_background: linear-gradient(135deg, #f9e7a1, #d4af37);
+    --boton_transition: border-color .2s, box-shadow .2s, transform .2s;
+    --boton_textDecoration: none;
+    --boton_border1: 1px solid #ffd772;
+    --boton_boxShadow: 0 0 0 6px rgba(255,215,114,0.35);
+    --boton_transform: translateY(-1px);
     /* End: Variables de propiedades del boton */
     /* End: VARIABLES */
 }
@@ -341,6 +346,7 @@ Declaracion de funciones globales CSS Orientado a Objeto
 
 .headerIndex{
     background: url('../images/header/barberia.png') center/cover no-repeat;
+    background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
 }
 #headerIndex{
     grid-row: 1 / 2;
@@ -376,20 +382,20 @@ Declaracion de funciones globales CSS Orientado a Objeto
 }
 #headerIndex section:nth-child(1) a{
     margin-top: 24px;
-    padding: 13px 18px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: #0a1208;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #ffdf8b, #e8b94a);
-    border-color: transparent;
-    transition: border-color .2s, box-shadow .2s, transform .2s;
+    padding: var(--boton_padding);
+    font-size: var(--boton_fontSize);
+    font-weight: var(--boton_fontWeight);
+    color: var(--boton_color);
+    border: var(--boton_border);
+    border-radius: var(--boton_borderRadius);
+    background: var(--boton_background);
+    transition: var(--boton_transition);
+    text-decoration: var(--boton_textDecoration);
 }
 #headerIndex section:nth-child(1) a:hover{
-    border-color: #ffd772;
-    box-shadow: 0 0 0 6px rgba(212,175,55,0.35);
-    transform: translateY(-1px);
+    border: var(--boton_border1);
+    box-shadow: var(--boton_boxShadow);
+    transform: var(--boton_transform);
 }
 /*  */
 #headerIndex section:nth-child(2){
@@ -1548,21 +1554,20 @@ Declaracion de funciones globales CSS Orientado a Objeto
     display: flex;
 }
 #footer section:nth-child(5) ul li:nth-child(3) a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--boton_height);
     padding: var(--boton_padding);
     font-size: var(--boton_fontSize);
     font-weight: var(--boton_fontWeight);
-    /* color: var(--boton_color); */
-    color: #e7e7e9;
+    color: var(--boton_color);
+    border: var(--boton_border);
     border-radius: var(--boton_borderRadius);
-    border: 1px solid #1d1d22;
-    transition: border-color .2s ease, color .2s ease;
+    background: var(--boton_background);
+    transition: var(--boton_transition);
+    text-decoration: var(--boton_textDecoration);
 }
 #footer section:nth-child(5) ul li:nth-child(3) a:hover{
-    border: 1px solid var(--color_morado);
+    border: var(--boton_border1);
+    box-shadow: var(--boton_boxShadow);
+    transform: var(--boton_transform);
 }
 /*  */
 #footer .footer_derechos{
