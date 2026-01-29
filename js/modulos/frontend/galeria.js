@@ -49,7 +49,7 @@ export class Galeria{
             $img.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==");
             $img.setAttribute("data-set-alt", data.imagen_descripcion);
             
-            $figcaption.textContent = "@pixart";
+            $figcaption.textContent = "@bersalles";
             
             $figure.appendChild($img);
             $figure.appendChild($figcaption);
